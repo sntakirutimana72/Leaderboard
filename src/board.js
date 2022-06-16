@@ -1,25 +1,5 @@
-import { API_URL, API_NAME, postData } from './api.js';
+import { API_URL, postData } from './api.js';
 import { Elements, $select } from './elements.js';
-
-const getAPIKey = async () => {
-  let key = localStorage.getItem(API_NAME);
-
-  if (key === null) {
-    const response = await postData(API_URL, { name: API_NAME });
-    const { result } = await response.json();
-
-    key = result.replace('Game with ID: ', '').replace(' added.', '');
-    localStorage.setItem(API_NAME, key);
-  }
-
-  return key;
-};
-
-const getAPIFullURL = async () => {
-  const key = await getAPIKey();
-
-  return `${API_URL}${key}/scores/`;
-};
 
 const renderScore = ({ user, score }) => {
   const element = document.createElement('li');
@@ -52,7 +32,7 @@ export async function postScore(evt) {
     user: this.elements.user.value,
     score: parseInt(this.elements.score.value, 10),
   };
-  const response = await postData(await getAPIFullURL(), player);
+  const response = await postData(API_URL, player);
   const { result } = await response.json();
 
   if (result === 'Leaderboard score created correctly.') {
@@ -66,7 +46,7 @@ export async function postScore(evt) {
 export const getScores = async () => {
   flagTrigger(Elements.refresh);
 
-  const response = await fetch(await getAPIFullURL());
+  const response = await fetch(API_URL);
   const result = await response.json();
 
   populateScore(result);
