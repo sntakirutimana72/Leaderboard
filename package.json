@@ -1,5 +1,5 @@
 {
-  "name": "microverse-webpack-template",
+  "name": "Leaderboard",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sntakirutimana72/microverse-webpack-template.git"
+    "url": "git+https://github.com/sntakirutimana72/Leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sntakirutimana72/microverse-webpack-template/issues"
+    "url": "https://github.com/sntakirutimana72/Leaderboard/issues"
   },
-  "homepage": "https://github.com/sntakirutimana72/microverse-webpack-template#readme",
+  "homepage": "https://github.com/sntakirutimana72/Leaderboard#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
@@ -44,5 +44,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "main": "webpack.config.js"
 }
