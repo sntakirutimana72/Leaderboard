@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# microverse-html-css-template
+# Leaderboard
 
-> A Microverse GitHub template for projects built with _`html`_, _`css`_, and _`javascript`_ only.
+An application that displays saved user scores on the board and also allows user to add more scores to the board.
 
 
 ## Built With
@@ -11,12 +11,6 @@
 - css
 - JavaScript
 - Webpack
-
-
-## Live Demo (if available)
-
-
-## Screenshots (if available)
 
 
 ## Getting Started
@@ -43,11 +37,11 @@ Open _Terminal/Shell_ inside your _VSCode_ and run
 
 ### Run tests
 
-- For _hint_ tests, run
+- For _webhint_ tests, run
   ```
     npm run lint:hint
   ```
-- For _style_ tests, run
+- For _stylelint_ tests, run
   ```
     npm run lint:style
   ```
@@ -55,8 +49,10 @@ Open _Terminal/Shell_ inside your _VSCode_ and run
   ```
     npm run lint:es
   ```
-
-### Deployment
+- For running a _**webpack local server**_, run
+  ```
+    npm start
+  ```
 
 
 ## Authors
