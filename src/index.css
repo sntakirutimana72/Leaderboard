@@ -1,0 +1,19 @@
+/* Here you apply all kinds of styling to your app UIs */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #d3d3d3;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.any-heading,
+.any-paragraph {
+  padding: 0;
+}
