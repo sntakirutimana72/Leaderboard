@@ -1,4 +1,4 @@
-export const BOARD_SCORES = {
+const BOARD_SCORES = {
   Name1: 100,
   Name2: 20,
   Name3: 50,
@@ -7,3 +7,5 @@ export const BOARD_SCORES = {
   Name6: 77,
   Name7: 42,
 };
+
+export default BOARD_SCORES;

@@ -24,6 +24,7 @@ ul {
 main {
   max-width: 700px;
   margin: 0 auto;
+  padding: 15px;
 }
 
 main > div {
@@ -48,7 +49,7 @@ main > div {
 }
 
 h1 {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .board-form {
@@ -98,4 +99,10 @@ li {
 
 li:nth-child(even) {
   background: rgba(219, 223, 222, 0.4);
+}
+
+@media (max-width: 610px) {
+  main > div {
+    flex-direction: column !important;
+  }
 }

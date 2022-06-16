@@ -1,4 +1,4 @@
-import { populateScore } from './board.js';
+import populateScore from './board.js';
 
 const onready = () => {
   populateScore().then(() => {});
