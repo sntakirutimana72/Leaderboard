@@ -6,8 +6,25 @@
         <title>Leaderboard</title>
     </head>
     <body>
-        <section>
+        <main>
             <h1>Learderboard</h1>
-        </section>
+            <div class="flex">
+                <section class="flex flex-column board-records">
+                    <div class="flex space-between align-center">
+                        <h2>Recent scores</h2>
+                        <button type="button" class="btn">Refresh</button>
+                    </div>
+                    <ul class="flex flex-column no-spacing scores"></ul>
+                </section>
+                <section class="board-form">
+                    <form action="#" class="flex flex-column">
+                        <h2>Add your score</h2>
+                        <input type="text" name="name" class="field" placeholder="your name" required>
+                        <input type="text" name="score" class="field" placeholder="your score" required>
+                        <input type="submit" class="btn">
+                    </form>
+                </section>
+            </div>
+        </main>
     </body>
 </html>
