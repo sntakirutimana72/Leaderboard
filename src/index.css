@@ -1,19 +1,108 @@
 /* Here you apply all kinds of styling to your app UIs */
 
+@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background: #d3d3d3;
 }
 
 * {
   font-family: 'Inter', sans-serif;
+  color: #272727;
 }
 
-.any-heading,
-.any-paragraph {
+ul {
+  list-style: none;
+  margin: 0;
   padding: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+main > div {
+  gap: 70px !important;
+}
+
+.flex {
+  display: flex;
+  gap: 15px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+h1 {
+  padding-bottom: 40px;
+}
+
+.board-form {
+  max-width: 270px;
+}
+
+form,
+section {
+  width: 100%;
+}
+
+.scores {
+  border: 2px solid #272727ab;
+  flex-grow: 1;
+  gap: 2px !important;
+}
+
+.field {
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #272727;
+  box-shadow: 0 0 4px black;
+}
+
+.field:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+input.btn {
+  max-width: fit-content;
+  align-self: flex-end;
+}
+
+li {
+  padding: 4px;
+}
+
+li:nth-child(even) {
+  background: rgba(219, 223, 222, 0.4);
+}
+
+@media (max-width: 610px) {
+  main > div {
+    flex-direction: column !important;
+  }
 }
