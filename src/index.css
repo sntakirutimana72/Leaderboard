@@ -163,6 +163,7 @@ li:nth-child(even) {
   0% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
@@ -172,6 +173,7 @@ li:nth-child(even) {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0);
   }
@@ -181,6 +183,7 @@ li:nth-child(even) {
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(24px, 0);
   }

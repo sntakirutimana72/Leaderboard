@@ -12,7 +12,7 @@ export class Elements {
   }
 
   static get submit() {
-    return document.querySelector(`button[type='submit']`);
+    return document.querySelector('button[type=\'submit\']');
   }
 }
 

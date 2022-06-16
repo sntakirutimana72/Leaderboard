@@ -5,7 +5,7 @@ const getAPIKey = async () => {
   let key = localStorage.getItem(API_NAME);
 
   if (key === null) {
-    const response = await postData(API_URL, {name: API_NAME});
+    const response = await postData(API_URL, { name: API_NAME });
     const { result } = await response.json();
 
     key = result.replace('Game with ID: ', '').replace(' added.', '');
@@ -21,7 +21,7 @@ const getAPIFullURL = async () => {
   return `${API_URL}${key}/scores/`;
 };
 
-const renderScore = ({user, score}) => {
+const renderScore = ({ user, score }) => {
   const element = document.createElement('li');
   element.textContent = `${user}: ${score}`;
 
@@ -36,7 +36,7 @@ const flagTrigger = (trigger) => {
   $select('.lds-dots', trigger).classList.toggle('hidden');
 };
 
-const populateScore = ({result: scores}) => {
+const populateScore = ({ result: scores }) => {
   const listView = Elements.scoreList;
   listView.innerHTML = '';
   scores.forEach((player) => listView.appendChild(renderScore(player)));
@@ -65,7 +65,7 @@ export async function postScore(evt) {
 
 export const getScores = async () => {
   flagTrigger(Elements.refresh);
-  
+
   const response = await fetch(await getAPIFullURL());
   const result = await response.json();
 
