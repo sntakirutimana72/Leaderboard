@@ -8,11 +8,13 @@ html {
 
 body {
   margin: 0;
+  background: #101020;
 }
 
 * {
   font-family: 'Inter', sans-serif;
-  color: #272727;
+  color: #bcbccc;
+  vertical-align: middle;
 }
 
 ul {
@@ -29,6 +31,10 @@ main {
 
 main > div {
   gap: 70px !important;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .flex {
@@ -53,7 +59,7 @@ h1 {
 }
 
 .board-form {
-  max-width: 270px;
+  max-width: 250px;
 }
 
 form,
@@ -62,7 +68,8 @@ section {
 }
 
 .scores {
-  border: 2px solid #272727ab;
+  border: 2px solid #27272763;
+  box-shadow: 0 0 3px cyan;
   flex-grow: 1;
   gap: 2px !important;
 }
@@ -70,14 +77,19 @@ section {
 .field {
   border-radius: 4px;
   padding: 8px;
+  background-color: #101020;
+  border: 1px solid #27272763;
   box-sizing: border-box;
-  border: 2px solid #272727;
-  box-shadow: 0 0 4px black;
+  box-shadow: 0 0 4px cyan;
 }
 
 .field:focus {
   outline: none;
-  border: 2px solid blue;
+  border-color: skyblue;
+}
+
+input:-webkit-autofill {
+  background-color: #101020 !important;
 }
 
 .btn {
@@ -85,12 +97,21 @@ section {
   padding: 5px 15px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  background: #101020;
+  box-shadow: 0 0 4px cyan;
 }
 
-input.btn {
+.btn:focus {
+  border: none;
+}
+
+.btn[type='submit'] {
   max-width: fit-content;
   align-self: flex-end;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
 }
 
 li {
@@ -98,11 +119,79 @@ li {
 }
 
 li:nth-child(even) {
-  background: rgba(219, 223, 222, 0.4);
+  background: #5353be36;
+}
+
+.lds-dots {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 20px;
+}
+
+.lds-dots div {
+  position: absolute;
+  top: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: cyan;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-dots div:nth-child(1) {
+  left: 8px;
+  animation: lds-dots1 0.6s infinite;
+}
+
+.lds-dots div:nth-child(2) {
+  left: 8px;
+  animation: lds-dots2 0.6s infinite;
+}
+
+.lds-dots div:nth-child(3) {
+  left: 32px;
+  animation: lds-dots2 0.6s infinite;
+}
+
+.lds-dots div:nth-child(4) {
+  left: 56px;
+  animation: lds-dots3 0.6s infinite;
+}
+
+@keyframes lds-dots1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-dots3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-dots2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }
 
 @media (max-width: 610px) {
   main > div {
     flex-direction: column !important;
+  }
+
+  .board-form {
+    max-width: unset;
   }
 }
