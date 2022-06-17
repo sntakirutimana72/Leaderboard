@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-A _**Leaderboard**_ application displays user scores on the app layout board, and also allows user to add more scores to the board. The displayed scores are arranged in descending order.
+A _**Leaderboard**_ app that pulls from a LeaderboardGameAPI and allows users to view recent scores and add more scores to the score board. Built with HTML, CSS, JavaScript, and Webpack.
 
 <p>
   <img alt="App Screeshot" src="./app_screenshot.png">
