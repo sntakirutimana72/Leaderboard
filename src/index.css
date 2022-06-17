@@ -13,7 +13,7 @@ body {
 
 * {
   font-family: 'Inter', sans-serif;
-  color: #bcbccc;
+  color: white;
   vertical-align: middle;
 }
 
@@ -67,42 +67,38 @@ section {
   width: 100%;
 }
 
+.shadow {
+  border: 2px solid #27272763 !important;
+  box-shadow: 0 0 4px black;
+  border-radius: 4px;
+}
+
 .scores {
-  border: 2px solid #27272763;
-  box-shadow: 0 0 3px cyan;
   flex-grow: 1;
   gap: 2px !important;
 }
 
 .field {
-  border-radius: 4px;
   padding: 8px;
   background-color: #101020;
-  border: 1px solid #27272763;
-  box-sizing: border-box;
-  box-shadow: 0 0 4px cyan;
 }
 
 .field:focus {
   outline: none;
-  border-color: skyblue;
-}
-
-input:-webkit-autofill {
-  background-color: #101020 !important;
-}
-
-.btn {
-  border-radius: 4px;
-  padding: 5px 15px;
-  border: none;
-  cursor: pointer;
-  background: #101020;
   box-shadow: 0 0 4px cyan;
 }
 
-.btn:focus {
-  border: none;
+.btn {
+  padding: 5px 15px;
+  cursor: pointer;
+  background: #101020;
+}
+
+.btn:focus,
+.btn:hover {
+  outline: none;
+  border: none !important;
+  background: linear-gradient(to right, orangered, purple);
 }
 
 .btn[type='submit'] {
@@ -125,15 +121,15 @@ li:nth-child(even) {
 .lds-dots {
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 20px;
+  width: 78px;
+  height: 18px;
 }
 
 .lds-dots div {
   position: absolute;
-  top: 3px;
-  width: 13px;
-  height: 13px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: cyan;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
