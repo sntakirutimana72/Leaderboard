@@ -18,6 +18,11 @@ A _**Leaderboard**_ application displays user scores on the app layout board, an
 - Webpack
 
 
+## Live Demo
+
+For user first hand experience, please visit this <a href="https://sntakirutimana72.github.io/Leaderboard/" target="_blank" rel="noopener">link</a>
+
+
 ## Getting Started
 
 To get a copy of this project running on your local computer, do the followings:
