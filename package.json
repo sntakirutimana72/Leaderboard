@@ -1,7 +1,7 @@
 {
   "name": "Leaderboard",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "description": "A Leaderboard app that pulls from a LeaderboardGameAPI and allows users to view recent scores and add more scores to the score board. Built with HTML, CSS, JavaScript, and Webpack.",
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
