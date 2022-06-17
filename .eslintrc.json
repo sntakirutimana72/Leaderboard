@@ -18,7 +18,8 @@
       "js": "always", "json": "always"
     }],
     "no-unused-vars": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-plusplus": "off"
   },
   "ignorePatterns": [
     "dist/",

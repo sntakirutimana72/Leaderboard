@@ -10,7 +10,7 @@ const renderScore = ({ user, score }) => {
 
 const sortByHighestScore = (...scores) => {
   for (let l = 1; l < scores.length; l++) {
-    let current = scores[l];
+    const current = scores[l];
     let j = l - 1;
 
     while ((j > -1) && (current.score > scores[j].score)) {
@@ -22,8 +22,8 @@ const sortByHighestScore = (...scores) => {
   return scores;
 };
 
-const getAdjacentSibling = ({score}) => Array.from(Elements.scoreList.children).find(
-  ({textContent}) => score > parseInt(textContent.split(':').pop(), 10)
+const getAdjacentSibling = ({ score }) => Array.from(Elements.scoreList.children).find(
+  ({ textContent }) => score > parseInt(textContent.split(':').pop(), 10),
 );
 
 const flagTrigger = (trigger) => {
