@@ -2,7 +2,11 @@
 
 # Leaderboard
 
-An application that displays saved user scores on the board and also allows user to add more scores to the board.
+A _**Leaderboard**_ application displays user scores on the app layout board, and also allows user to add more scores to the board. The displayed scores are arranged in descending order.
+
+<p>
+  <img alt="App Screeshot" src="./app_screenshot.png">
+</p>
 
 
 ## Built With
@@ -10,6 +14,7 @@ An application that displays saved user scores on the board and also allows user
 - html
 - css
 - JavaScript
+- API
 - Webpack
 
 
