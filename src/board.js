@@ -8,6 +8,24 @@ const renderScore = ({ user, score }) => {
   return element;
 };
 
+const sortByHighestScore = (...scores) => {
+  for (let l = 1; l < scores.length; l++) {
+    let current = scores[l];
+    let j = l - 1;
+
+    while ((j > -1) && (current.score > scores[j].score)) {
+      scores[j + 1] = scores[j];
+      j--;
+    }
+    scores[j + 1] = current;
+  }
+  return scores;
+};
+
+const getAdjacentSibling = ({score}) => Array.from(Elements.scoreList.children).find(
+  ({textContent}) => score > parseInt(textContent.split(':').pop(), 10)
+);
+
 const flagTrigger = (trigger) => {
   const { disabled = false } = trigger;
   trigger.disabled = !disabled;
@@ -19,7 +37,7 @@ const flagTrigger = (trigger) => {
 const populateScore = ({ result: scores }) => {
   const listView = Elements.scoreList;
   listView.innerHTML = '';
-  scores.forEach((player) => listView.appendChild(renderScore(player)));
+  sortByHighestScore(...scores).forEach((player) => listView.appendChild(renderScore(player)));
 
   flagTrigger(Elements.refresh);
 };
@@ -37,7 +55,13 @@ export async function postScore(evt) {
 
   if (result === 'Leaderboard score created correctly.') {
     this.reset();
-    Elements.scoreList.appendChild(renderScore(player));
+
+    const adjacentSibling = getAdjacentSibling(player);
+    const newSibling = renderScore(player);
+
+    if (adjacentSibling === null) Elements.scoreList.appendChild(newSibling);
+
+    else adjacentSibling.insertAdjacentElement('beforebegin', newSibling);
   }
 
   flagTrigger(Elements.submit);
