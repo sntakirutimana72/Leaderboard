@@ -30,7 +30,7 @@ To get a copy of this project running on your local computer, do the followings:
 ### Setup
 
 - Install _VSCode_ ([link](https://code.visualstudio.com/download))
-- Clone this project repository on your local computer. ([link](../../))
+- Clone this project repository on your local computer. ([link](https://github.com/sntakirutimana72/Leaderboard))
 - Open the project directory with _VSCode_
 
 ### Install
@@ -64,13 +64,13 @@ Open _Terminal/Shell_ inside your _VSCode_ and run
 
 👤 **Steve**
 
-- GitHub: [@sntakirutimana72](../../../)
+- GitHub: [@sntakirutimana72](https://github.com/sntakirutimana72/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/sntakirutimana72/Leaderboard/issues/).
 
 ## Show your support
 
