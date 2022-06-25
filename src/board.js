@@ -8,19 +8,7 @@ const renderScore = ({ user, score }) => {
   return element;
 };
 
-const sortByHighestScore = (...scores) => {
-  for (let l = 1; l < scores.length; l++) {
-    const current = scores[l];
-    let j = l - 1;
-
-    while ((j > -1) && (current.score > scores[j].score)) {
-      scores[j + 1] = scores[j];
-      j--;
-    }
-    scores[j + 1] = current;
-  }
-  return scores;
-};
+const sortByHighestScore = ({score: a}, {score: b}) => b - a;
 
 const getAdjacentSibling = ({ score }) => Array.from(Elements.scoreList.children).find(
   ({ textContent }) => score > parseInt(textContent.split(':').pop(), 10),
@@ -35,10 +23,8 @@ const flagTrigger = (trigger) => {
 };
 
 const populateScore = ({ result: scores }) => {
-  const listView = Elements.scoreList;
-  listView.innerHTML = '';
-  sortByHighestScore(...scores).forEach((player) => listView.appendChild(renderScore(player)));
-
+  const list = Elements.scoreList;
+  scores.sort(sortByHighestScore).forEach((player) => list.appendChild(renderScore(player)));
   flagTrigger(Elements.refresh);
 };
 
@@ -69,7 +55,7 @@ export async function postScore(evt) {
 
 export const getScores = async () => {
   flagTrigger(Elements.refresh);
-
+  Elements.scoreList.innerHTML = '';
   const response = await fetch(API_URL);
   const result = await response.json();
 
