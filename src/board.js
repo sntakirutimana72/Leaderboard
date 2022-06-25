@@ -8,7 +8,7 @@ const renderScore = ({ user, score }) => {
   return element;
 };
 
-const sortByHighestScore = ({score: a}, {score: b}) => b - a;
+const sortByHighestScore = ({ score: a }, { score: b }) => b - a;
 
 const getAdjacentSibling = ({ score }) => Array.from(Elements.scoreList.children).find(
   ({ textContent }) => score > parseInt(textContent.split(':').pop(), 10),
