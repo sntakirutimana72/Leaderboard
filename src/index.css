@@ -1,6 +1,6 @@
 /* Here you apply all kinds of styling to your app UIs */
 
-@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -12,9 +12,9 @@ body {
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
   color: white;
-  vertical-align: middle;
 }
 
 ul {
@@ -119,7 +119,6 @@ li:nth-child(even) {
 }
 
 .lds-dots {
-  display: inline-block;
   position: relative;
   width: 78px;
   height: 18px;
